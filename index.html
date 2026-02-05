@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="KREATIV Marketing & Publicidades" />
-    <meta property="og:description" content="A marca do seu sucesso. Marketing e publicidade profissional na Bahia." />
+    <meta property="og:title" content="É Fato - Portal de Notícias" />
+    <meta
+      property="og:description"
+      content="Portal de notícias com destaques em tempo real, política, esportes e entretenimento."
+    />
     <meta
       property="og:image"
       content="https://static.getmocha.com/og.png"
@@ -15,12 +18,15 @@
       content="https://getmocha.com"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:author" content="KREATIV" />
-    <meta property="og:site_name" content="KREATIV" />
+    <meta property="og:author" content="É Fato" />
+    <meta property="og:site_name" content="É Fato" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:site" content="@kreativ" />
-    <meta property="twitter:title" content="KREATIV Marketing & Publicidades" />
-    <meta property="twitter:description" content="A marca do seu sucesso. Marketing e publicidade profissional na Bahia." />
+    <meta property="twitter:title" content="É Fato - Portal de Notícias" />
+    <meta
+      property="twitter:description"
+      content="Portal de notícias com destaques em tempo real, política, esportes e entretenimento."
+    />
     <meta
       property="twitter:image"
       content="https://static.getmocha.com/og.png"
@@ -40,10 +46,585 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <title>KREATIV Marketing & Publicidades</title>
+    <title>É Fato - Portal de Notícias</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Poppins", system-ui, -apple-system, sans-serif;
+        --primary: #ff6b1a;
+        --primary-dark: #eb5202;
+        --navy: #14103b;
+        --navy-strong: #1a1352;
+        --navy-light: #2c2675;
+        --bg: #f4f6fb;
+        --card: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: linear-gradient(135deg, #0a0f57 0%, #15176e 40%, #ff6b1a 100%);
+        color: #1d1d1f;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .page {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 32px 20px 60px;
+      }
+
+      .top-shell {
+        background: var(--bg);
+        border-radius: 28px;
+        padding: 28px;
+        box-shadow: 0 30px 80px rgba(13, 12, 54, 0.35);
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--card);
+        padding: 16px 22px;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(23, 17, 74, 0.1);
+        gap: 20px;
+      }
+
+      .logo {
+        font-size: 28px;
+        font-weight: 800;
+        color: #1a4bc9;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .logo span {
+        color: var(--primary);
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        font-weight: 600;
+        color: #212653;
+      }
+
+      .search {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #eef1ff;
+        display: grid;
+        place-items: center;
+        font-size: 18px;
+      }
+
+      .hero {
+        margin-top: 26px;
+        background: linear-gradient(135deg, #201663, #2f1d7b);
+        padding: 26px;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 22px;
+        color: #fff;
+      }
+
+      .hero-main {
+        background: linear-gradient(135deg, rgba(255, 107, 26, 0.95), rgba(246, 62, 0, 0.6)),
+          url("https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80")
+            center/cover;
+        border-radius: 18px;
+        padding: 28px;
+        min-height: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 16px;
+      }
+
+      .tag {
+        background: #ff7a2b;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 6px 12px;
+        border-radius: 999px;
+        letter-spacing: 0.04em;
+      }
+
+      .hero-main h1 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 800;
+      }
+
+      .hero-main p {
+        margin: 0;
+        font-size: 14px;
+        max-width: 420px;
+      }
+
+      .live {
+        background: #ff4d0a;
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 700;
+        align-self: flex-start;
+      }
+
+      .hero-side {
+        display: grid;
+        gap: 16px;
+      }
+
+      .side-card {
+        background: #24185f;
+        border-radius: 16px;
+        overflow: hidden;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        min-height: 148px;
+      }
+
+      .side-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .side-card .info {
+        padding: 12px 14px 16px;
+      }
+
+      .side-card h4 {
+        margin: 4px 0 6px;
+        font-size: 16px;
+      }
+
+      .meta {
+        font-size: 12px;
+        opacity: 0.7;
+      }
+
+      .news-grid {
+        margin-top: 26px;
+        display: grid;
+        grid-template-columns: 2.1fr 1fr;
+        gap: 22px;
+      }
+
+      .section {
+        background: var(--card);
+        border-radius: 16px;
+        padding: 18px;
+      }
+
+      .section-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #1c1f46;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .cards-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .news-card {
+        background: #1d1f4b;
+        color: #fff;
+        border-radius: 14px;
+        overflow: hidden;
+        min-height: 180px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .news-card img {
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
+      }
+
+      .news-card .content {
+        padding: 12px;
+      }
+
+      .badge {
+        display: inline-flex;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        background: var(--primary);
+        margin-bottom: 8px;
+      }
+
+      .latest-grid {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+
+      .small-card {
+        background: #1c1f4b;
+        color: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .small-card img {
+        width: 100%;
+        height: 110px;
+        object-fit: cover;
+      }
+
+      .small-card .content {
+        padding: 10px 12px;
+        font-size: 12px;
+      }
+
+      .sidebar {
+        display: grid;
+        gap: 18px;
+      }
+
+      .ranked {
+        background: var(--card);
+        border-radius: 16px;
+        padding: 18px;
+      }
+
+      .ranked ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 12px;
+      }
+
+      .ranked li {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        font-size: 13px;
+      }
+
+      .rank {
+        background: var(--primary);
+        color: #fff;
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+      }
+
+      .weather {
+        background: #f3f4ff;
+        border-radius: 16px;
+        padding: 16px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .weather .temp {
+        font-size: 32px;
+        font-weight: 700;
+        color: #1c1f46;
+      }
+
+      .promo {
+        background: var(--primary);
+        color: #fff;
+        border-radius: 14px;
+        padding: 14px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .social {
+        display: flex;
+        gap: 10px;
+        font-size: 18px;
+      }
+
+      .footer-news {
+        margin-top: 26px;
+        background: linear-gradient(135deg, #ff6b1a, #ff7f2a);
+        padding: 20px;
+        border-radius: 18px;
+        color: #fff;
+      }
+
+      .footer-grid {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .footer-card {
+        background: #20185f;
+        border-radius: 14px;
+        padding: 14px;
+      }
+
+      .footer-card h4 {
+        margin: 6px 0 8px;
+      }
+
+      .footer-list {
+        margin-top: 12px;
+        font-size: 12px;
+        opacity: 0.85;
+        display: grid;
+        gap: 6px;
+      }
+
+      @media (max-width: 980px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        .news-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .cards-row,
+        .latest-grid,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/react-app/main.tsx"></script>
+    <div class="page">
+      <div class="top-shell">
+        <header>
+          <div class="logo">É <span>FATO</span></div>
+          <nav>
+            <a href="#">Início</a>
+            <a href="#">Notícias</a>
+            <a href="#">Esportes</a>
+            <a href="#">Política</a>
+            <a href="#">Entretenimento</a>
+          </nav>
+          <div class="search">🔍</div>
+        </header>
+
+        <section class="hero">
+          <div class="hero-main">
+            <span class="tag">ESTÁ ACONTECENDO AGORA</span>
+            <h1>Grande incêndio atinge galpão industrial</h1>
+            <p>
+              Um incêndio de grandes proporções está começando agora em um galpão
+              industrial na Zona Norte. Equipes seguem no local.
+            </p>
+            <span class="live">AO VIVO</span>
+          </div>
+          <div class="hero-side">
+            <article class="side-card">
+              <img
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=700&q=80"
+                alt="Política"
+              />
+              <div class="info">
+                <strong>Política</strong>
+                <h4>Plano urbano ganha destaque em audiência</h4>
+                <div class="meta">06.ABR 22:10 · em destaque</div>
+              </div>
+            </article>
+            <article class="side-card">
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=80"
+                alt="Tecnologia"
+              />
+              <div class="info">
+                <strong>Tecnologia</strong>
+                <h4>Aplicativo conecta cidades inteligentes</h4>
+                <div class="meta">06.ABR 23:41 · amanhã</div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="news-grid">
+          <div class="section">
+            <div class="section-title">
+              Últimas notícias
+              <span>◀ ▶</span>
+            </div>
+            <div class="cards-row">
+              <article class="news-card">
+                <img
+                  src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=700&q=80"
+                  alt="Internacional"
+                />
+                <div class="content">
+                  <span class="badge">INTERNACIONAL</span>
+                  <h4>Reunião do G7 discute segurança global</h4>
+                  <div class="meta">06.ABR 22:31 · Mais lidas</div>
+                </div>
+              </article>
+              <article class="news-card">
+                <img
+                  src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=80"
+                  alt="Política"
+                />
+                <div class="content">
+                  <span class="badge" style="background:#3b82f6">POLÍTICA</span>
+                  <h4>Nova proposta de reforma tributária em debate</h4>
+                  <div class="meta">06.ABR 22:31 · Política</div>
+                </div>
+              </article>
+            </div>
+
+            <div class="section-title" style="margin-top: 18px;">Últimas</div>
+            <div class="latest-grid">
+              <article class="small-card">
+                <img
+                  src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=600&q=80"
+                  alt="Internacional"
+                />
+                <div class="content">
+                  <span class="badge">INTERNACIONAL</span>
+                  <div>Nova rodada do G7 debate segurança regional.</div>
+                </div>
+              </article>
+              <article class="small-card">
+                <img
+                  src="https://images.unsplash.com/photo-1515165562835-c4c0d4475a96?auto=format&fit=crop&w=600&q=80"
+                  alt="Cidades"
+                />
+                <div class="content">
+                  <span class="badge" style="background:#3b82f6">CIDADES</span>
+                  <div>Mobilidade urbana testa nova frota elétrica.</div>
+                </div>
+              </article>
+              <article class="small-card">
+                <img
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80"
+                  alt="Tecnologia"
+                />
+                <div class="content">
+                  <span class="badge" style="background:#00b894">TECNOLOGIA</span>
+                  <div>IA promete revolucionar serviços públicos.</div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <aside class="sidebar">
+            <div class="ranked">
+              <div class="section-title">Mais lidas</div>
+              <ol>
+                <li>
+                  <span class="rank">1</span>
+                  Resultados das eleições surpreendem analistas.
+                </li>
+                <li>
+                  <span class="rank">2</span>
+                  Novo aumento no preço dos combustíveis.
+                </li>
+                <li>
+                  <span class="rank">3</span>
+                  Estudo revela mudanças climáticas alarmantes.
+                </li>
+                <li>
+                  <span class="rank">4</span>
+                  Estrela do futebol acerta com novo clube.
+                </li>
+              </ol>
+            </div>
+
+            <div class="weather">
+              <strong>Rio de Janeiro, RJ</strong>
+              <div class="temp">26°</div>
+              <div>37° / 21° · Parcialmente nublado</div>
+            </div>
+
+            <div class="promo">
+              Assine agora e receba notícias exclusivas em primeira mão.
+            </div>
+
+            <div class="social">
+              <span>🌐</span>
+              <span>🐦</span>
+              <span>▶️</span>
+              <span>💼</span>
+            </div>
+          </aside>
+        </section>
+
+        <section class="footer-news">
+          <div class="section-title" style="color:#fff;">
+            Notícias · Esportes · Política · Entretenimento
+          </div>
+          <div class="footer-grid">
+            <article class="footer-card">
+              <span class="badge">AO VIVO</span>
+              <h4>Rio de Janeiro, RJ</h4>
+              <div class="meta">06.ABR 22:21 · Ao vivo</div>
+              <div class="footer-list">
+                <div>Ministro anuncia pacote para economia.</div>
+                <div>Time local se destaca em campeonato.</div>
+                <div>Novo projeto de lei deve ser votado hoje.</div>
+              </div>
+            </article>
+            <article class="footer-card">
+              <span class="badge" style="background:#3b82f6">POLÍTICA</span>
+              <h4>Time local se destaca em campeonato</h4>
+              <div class="meta">06.ABR 22:31 · Política</div>
+              <div class="footer-list">
+                <div>Nova proposta de lei deve ser votada hoje.</div>
+                <div>Transporte público entra em greve parcial.</div>
+                <div>Saúde reforça campanhas de vacinação.</div>
+              </div>
+            </article>
+            <article class="footer-card">
+              <span class="badge" style="background:#ff7f2a">ENTRETENIMENTO</span>
+              <h4>Novo projeto de lei deve ser votado hoje</h4>
+              <div class="meta">06.ABR 22:41 · Entretenimento</div>
+              <div class="footer-list">
+                <div>Série de shows atrai público recorde.</div>
+                <div>Festival de cinema abre inscrições.</div>
+                <div>Artistas se unem por causa solidária.</div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
